@@ -1,0 +1,71 @@
+<!doctype html>
+
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spaceship Game</title>
+  <meta name="description" content="A mini-game">
+  <meta name="author" content="Davis">
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <script language="javascript" type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/p5@1.1.4/lib/p5.min.js"></script>
+  <script language="javascript" type="text/javascript" src="neuralnetwork/nn.js"></script>
+  <script language="javascript" type="text/javascript" src="neuralnetwork/matrix.js"></script>
+</head>
+
+<body>
+  <div class="elem">
+
+    <div id="holder"></div>
+    <div class="button-holder">
+      <div class="text-box">Difficulty</div>
+      <div class="text-box">Game speed</div>
+      <div id="difficulty" class="text-box diff">Rookie</div>
+      <div id="speed" class="text-box diff">1x</div>
+
+      <button onclick="rookie();this.blur()">
+        Rookie AI
+      </button>
+
+      <button onclick="cycles = 1;this.blur();gameSpeed.innerHTML = '1x' ">
+        1x speed
+      </button>
+
+      <button onclick="smart();this.blur();">
+        Smart AI
+      </button>
+
+      <button onclick="cycles = 2;this.blur();gameSpeed.innerHTML = '2x' ">
+        2x speed
+      </button>
+
+      <button onclick="unbeatable();this.blur()">
+        Unbeatable AI
+      </button>
+
+      <button onclick="cycles = 10;this.blur();gameSpeed.innerHTML = '10x' ">
+        10x speed
+      </button>
+      <div class="rules-box">
+        <div class="rules">
+          Controls:
+        </div>
+        <div class="rules">
+          Space - Steer the ship
+        </div>
+        <div class="rules">
+          R - Restart game (keep difficulty)
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <script src="game.js"></script>
+  <script src="/__/firebase/7.17.1/firebase-app.js"></script>
+  <script src="/__/firebase/init.js"></script>
+</body>
+
+</html>
